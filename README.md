@@ -51,7 +51,7 @@ airo-protocol/
 
 ## Case Descriptions
 
-### Case 01 — Kinematic Simulator (Tom & Jerry)
+### Case 01 — Kinematic Simulator
 **Domain:** Linear Systems of Equations / Uniform Rectilinear Motion (MRU)  
 **Platform:** Google AI Studio  
 **Period:** 7–27 July 2026  
