@@ -1,1 +1,376 @@
+# Protocolo de Testes - AI Studio Research Orchestrator
 
+Abaixo estão os prompts de extração estruturados pelo modelo RTCRF (Role, Task, Context, Rules, Format) para iniciar o ciclo de testes do novo aplicativo. Eles seguem a sequência estrita da Máquina de Estados Finita Determinística (MEFD).
+
+---
+
+## Prompt 1: Estado E00 - Inicialização
+**Copie e cole este prompt para iniciar a camada de Identificação:**
+
+**[ROLE]**
+Atue como um Especialista em Garantia de Qualidade (QA) e Co-designer de Tecnologia Educacional.
+
+**[TASK]**
+Inicialize o protocolo de testes para o novo aplicativo. Estruture os metadados do projeto, defina o escopo inicial dos testes (funcionalidades, fluxos) e gere a checklist ética e de acessibilidade. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos iniciando o Estado E00 (Inicialização) do AI Studio Research Orchestrator. O aplicativo servirá a propósitos educacionais, buscando aplicar metodologias de mediação socrática e integração construtivista. Todo o desenvolvimento e validação devem ser conduzidos em português brasileiro.
+
+**[RULES]**
+1. Mantenha o rigor epistêmico: separe claramente o que é "Evidência" (dados concretos fornecidos sobre o app) do que é "Inferência" (pressuposições sobre o uso).
+2. Não invente funcionalidades não declaradas. Solicite as informações complementares que faltarem.
+3. Não avance para a análise de código ainda; foque apenas nos metadados de inicialização.
+
+**[FORMAT]**
+Estruture a saída com um cabeçalho YAML e seções numeradas. 
+**Diretiva final:** Gere e salve o documento resultante como `E00_Metadados_Projeto.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 2: Estado E01 - Inventário de Artefatos
+**Copie e cole este prompt após a conclusão do Estado E00:**
+
+**[ROLE]**
+Atue como Arquiteto de Software e Analista de Requisitos.
+
+**[TASK]**
+Analise o escopo do aplicativo discutido no estado anterior e construa o inventário completo de artefatos de teste (telas, componentes de UI, módulos lógicos, endpoints). **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos no Estado E01 (Histórico Completo). Os metadados já estão mapeados. Precisamos consolidar o que será testado antes de avançar para a Extração (Estado E02 - Stack Tecnológica). O vocabulário técnico e o texto de apoio devem utilizar português brasileiro.
+
+**[RULES]**
+1. Utilize a ontologia de identificadores do protocolo: cada artefato mapeado deve receber um código único com o prefixo `ART` (ex: ART-001, ART-002).
+2. Evite interpretações pedagógicas neste estágio; o foco é puramente o mapeamento de ativos estruturais do aplicativo.
+
+**[FORMAT]**
+Apresente os dados organizados em uma tabela (Catálogo de Artefatos), contendo as colunas: ID, Nome do Artefato, Descrição e Status de Teste.
+**Diretiva final:** Gere e salve o documento resultante como `E01_Inventario_Artefatos.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 3: Estado E02 - Metadados Técnicos e Stack
+**Copie e cole este prompt após aprovar o inventário (Estado E01):**
+
+**[ROLE]**
+Atue como Engenheiro de Software Full-Stack.
+
+**[TASK]**
+Documente a arquitetura e a stack tecnológica do aplicativo. Mapeie dependências, bibliotecas (como React, Tailwind, Vite, ferramentas de visualização de dados ou scripts Python) e requisitos de infraestrutura. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Entramos na camada de Extração (Estado E02 - Metadados Técnicos). Precisamos da base técnica clara para, posteriormente, cruzar decisões de design com as limitações da tecnologia.
+
+**[RULES]**
+1. Documente as versões das tecnologias sempre que fornecidas.
+2. Sinalize como "Inferência" qualquer dependência técnica assumida que não tenha sido explicitamente declarada nos prompts anteriores.
+
+**[FORMAT]**
+Utilize formatação em blocos de código para comandos de instalação ou listagem de dependências.
+**Diretiva final:** Gere e salve o documento resultante como `E02_Stack_Tecnologica.md` diretamente na raiz do projeto.
+
+
+
+# Protocolo de Testes - AI Studio Research Orchestrator (Parte 2)
+
+Abaixo estão os prompts estruturados pelo modelo RTCRF para a continuação da camada de **Extração**. 
+
+---
+
+## Prompt 4: Estado E03 - Artefatos Produzidos
+**Copie e cole este prompt para detalhar os artefatos:**
+
+**[ROLE]**
+Atue como Analista de QA e Especialista em Documentação Técnica.
+
+**[TASK]**
+Detalhe os artefatos produzidos que foram mapeados no inventário inicial. Especifique as características técnicas de cada componente da interface, módulos de estado e utilitários. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos no Estado E03 (Artefatos Produzidos) da camada de Extração. Este estado foca no desdobramento técnico dos elementos, como componentes em React 19, configurações do Vite, tipagens em TypeScript e estilização usando Tailwind CSS v4.
+
+**[RULES]**
+1. Utilize a ontologia de identificadores: continue usando o prefixo `ART` para cada artefato detalhado.
+2. Evite interpretações pedagógicas. Mantenha o foco estritamente técnico e estrutural.
+3. Separe "Evidência" (código e arquivos reais) de "Inferência".
+
+**[FORMAT]**
+Estruture a saída com um cabeçalho YAML e tabelas descritivas para cada componente.
+**Diretiva final:** Gere e salve o documento resultante como `E03_Artefatos_Produzidos.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 5: Estado E04 - Extração de Interações
+**Copie e cole este prompt após aprovar o detalhamento dos artefatos:**
+
+**[ROLE]**
+Atue como Pesquisador de Interação Humano-Computador.
+
+**[TASK]**
+Extraia e registre o log sequencial, turno a turno, das sessões de teste e co-design do aplicativo. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Avançamos para o Estado E04 (Extração de Interações). Esta fase é crucial para documentar o processo dialógico e as decisões técnicas tomadas ao longo do desenvolvimento.
+
+**[RULES]**
+1. Atribua a cada turno de interação um identificador único com o prefixo `T` (ex: T-001, T-002).
+2. **Restrição epistêmica estrita:** Registre apenas evidências. É expressamente proibida qualquer interpretação ou análise de intenções neste estado. Responda apenas o que foi dito e feito.
+
+**[FORMAT]**
+Apresente os dados em uma lista sequencial clara.
+**Diretiva final:** Gere e salve o documento resultante como `E04_Extracao_Interacoes.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 6: Estado E05 - Análise de Intenções
+**Copie e cole este prompt após gerar o registro de interações:**
+
+**[ROLE]**
+Atue como Pesquisador em Educação Matemática e Design de Interação.
+
+**[TASK]**
+Analise os turnos mapeados no estado anterior para identificar e documentar as intenções pedagógicas e técnicas que motivaram cada decisão de design no aplicativo. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos no Estado E05 (Análise de Intenções). A análise deve procurar refletir os princípios de um ambiente de aprendizagem construtivista, onde a tecnologia atua como mediadora socrática do conhecimento.
+
+**[RULES]**
+1. Trabalhe em cima do registro de turnos (prefixo `T`).
+2. Diferencie claramente a "Evidência" (intenção explicitamente declarada no turno) da "Inferência sinalizada" (intenção deduzida pelo contexto).
+3. Não tente criar sínteses gerais ainda. Foque no mapeamento individual das intenções.
+
+**[FORMAT]**
+Utilize uma tabela correlacionando o ID do Turno (T-XXX), a Ação/Decisão e a Intenção (Evidência ou Inferência).
+**Diretiva final:** Gere e salve o documento resultante como `E05_Analise_Intencoes.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 7: Estado E06 - Classificação de Prompts
+**Copie e cole este prompt para fechar a camada de Extração:**
+
+**[ROLE]**
+Atue como Engenheiro de Prompts e Pesquisador Qualitativo.
+
+**[TASK]**
+Crie a taxonomia e a classificação de todos os prompts de desenvolvimento utilizados na construção e teste da aplicação. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Chegamos ao Estado E06 (Classificação de Prompts), o último da camada de Extração [cite: 1]. O foco aqui são os prompts de desenvolvimento (a intencionalidade pedagógica em ação), e não os prompts do protocolo de pesquisa [cite: 1].
+
+**[RULES]**
+1. Utilize o prefixo `PRM` para identificar cada prompt catalogado (ex: PRM-001, PRM-002) [cite: 1].
+2. Classifique o prompt quanto à sua natureza (ex: arquitetural, ajuste de interface, correção de lógica).
+
+**[FORMAT]**
+Apresente um catálogo estruturado com seções numeradas para cada categoria identificada.
+**Diretiva final:** Gere e salve o documento resultante como `E06_Classificacao_Prompts.md` diretamente na raiz do projeto.
+
+
+# Protocolo de Testes - AI Studio Research Orchestrator (Parte 3)
+
+Abaixo estão os prompts estruturados pelo modelo RTCRF para a **Camada de Análise**, que compreende os estados E07 a E11 [cite: 1].
+
+---
+
+## Prompt 8: Estado E07 - Mapeamento de Decisões
+**Copie e cole este prompt para iniciar a camada de Análise:**
+
+**[ROLE]**
+Atue como Arquiteto de Software e Co-designer.
+
+**[TASK]**
+Documente as principais decisões de design tomadas durante o co-design da aplicação, adotando o formato de Architecture Decision Records (ADR). **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos iniciando o Estado E07 (Mapeamento de Decisões) da camada de Análise [cite: 1]. O objetivo é entender o racional arquitetural e pedagógico por trás das escolhas estruturais do aplicativo. Tudo deve ser redigido em português brasileiro.
+
+**[RULES]**
+1. Utilize o prefixo `DEC` para identificar cada decisão catalogada (ex: DEC-001, DEC-002) [cite: 1].
+2. Separe claramente a "Evidência" (a decisão implementada) do "Contexto/Inferência" (por que foi tomada).
+
+**[FORMAT]**
+Estruture cada registro com: Título, Status, Contexto, Decisão e Consequências.
+**Diretiva final:** Gere e salve o documento resultante como `E07_Mapeamento_Decisoes.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 9: Estado E08 - Validação de Artefatos
+**Copie e cole este prompt após aprovar as decisões de design:**
+
+**[ROLE]**
+Atue como Analista de Testes QA e Pesquisador Metodológico.
+
+**[TASK]**
+Execute o ciclo de validação humana sobre os artefatos produzidos, verificando a consistência interna e a aderência aos requisitos pedagógicos. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos no Estado E08 (Validação de Artefatos) [cite: 1]. Aqui aplicamos os critérios de revisão para garantir que as saídas da inteligência artificial não sofram de alucinação ou inconsistência estrutural em relação à intenção original do professor.
+
+**[RULES]**
+1. Documente a aplicação dos 6 passos do ciclo de validação humana [cite: 1] para os componentes críticos.
+2. Não adicione novos recursos à aplicação; foque puramente na validação do que foi gerado.
+
+**[FORMAT]**
+Apresente um relatório de checklist detalhado.
+**Diretiva final:** Gere e salve o documento resultante como `E08_Validacao_Artefatos.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 10: Estado E09 - Arquitetura do Artefato
+**Copie e cole este prompt após o ciclo de validação:**
+
+**[ROLE]**
+Atue como Engenheiro de Software Sênior.
+
+**[TASK]**
+Descreva a estrutura técnica consolidada do artefato produzido, mapeando como os módulos, componentes visuais e lógicas de estado se interligam na aplicação final. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Este é o Estado E09 (Arquitetura do Artefato) [cite: 1]. Com as validações concluídas, precisamos do "raio-X" arquitetural definitivo que servirá de base para a futura documentação técnica.
+
+**[RULES]**
+1. Baseie-se estritamente nas evidências dos estados anteriores (stack e artefatos).
+2. Destaque como a arquitetura suporta o modelo construtivista e interativo exigido pela intenção pedagógica.
+
+**[FORMAT]**
+Utilize formatação hierárquica (ex: estrutura de pastas simulada) e tabelas de relacionamento entre módulos.
+**Diretiva final:** Gere e salve o documento resultante como `E09_Arquitetura_Artefato.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 11: Estado E10 - Problemas e Limitações
+**Copie e cole este prompt após fechar a arquitetura:**
+
+**[ROLE]**
+Atue como Engenheiro de Confiabilidade (SRE) e Analista de QA.
+
+**[TASK]**
+Faça o levantamento e registro formal de todos os problemas técnicos, bugs, gargalos de performance e limitações encontradas durante os testes da aplicação. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos no Estado E10 (Problemas e Limitações) [cite: 1]. É fundamental para o protocolo ter transparência total sobre onde a solução falha ou atinge seus limites, especialmente considerando restrições de infraestrutura e execução no navegador.
+
+**[RULES]**
+1. Utilize o prefixo `PRB` para identificar cada problema listado (ex: PRB-001, PRB-002) [cite: 1].
+2. Classifique a severidade de cada problema de forma objetiva (Evidência).
+
+**[FORMAT]**
+Organize os problemas em uma matriz ou tabela, indicando ID, Descrição, Severidade e Status.
+**Diretiva final:** Gere e salve o documento resultante como `E10_Problemas_Limitacoes.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 12: Estado E11 - Tensões e Resoluções
+**Copie e cole este prompt para finalizar a camada de Análise:**
+
+**[ROLE]**
+Atue como Pesquisador Qualitativo e Designer Instrucional.
+
+**[TASK]**
+Catalogue as tensões técnico-pedagógicas que emergiram durante o co-design e descreva como foram resolvidas (ou se permanecem em aberto). **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Chegamos ao Estado E11 (Tensões e Resoluções), o último da camada de Análise [cite: 1]. Este estado foca no atrito entre o que a IA ofereceu ou o que a tecnologia limitava, e a intenção pedagógica que norteou a resolução desse atrito (como a "subtração tecnológica") [cite: 1].
+
+**[RULES]**
+1. Utilize o prefixo `TEN` para identificar cada tensão catalogada (ex: TEN-001) [cite: 1].
+2. A distinção entre "Evidência" (o que aconteceu) e "Interpretação" (por que foi um conflito pedagógico) deve ser perfeitamente demarcada.
+
+**[FORMAT]**
+Apresente um catálogo detalhado de tensões, com seções estruturadas para o conflito e a resolução aplicada.
+**Diretiva final:** Gere e salve o documento resultante como `E11_Tensoes_Resolucoes.md` diretamente na raiz do projeto.
+
+
+# Protocolo de Testes - AI Studio Research Orchestrator (Parte 4)
+
+Abaixo estão os prompts estruturados pelo modelo RTCRF para a **Camada de Síntese**, que abrange os estados finais E12 a E15 [cite: 1]. Esta etapa consolida a análise e produz o relatório científico e o corpus final [cite: 1].
+
+---
+
+## Prompt 13: Estado E12 - Mapeamento de Agência
+**Copie e cole este prompt para iniciar a camada de Síntese:**
+
+**[ROLE]**
+Atue como Pesquisador Sênior em Teacher Agency e Inteligência Artificial na Educação.
+
+**[TASK]**
+Mapeie e analise os padrões de agência docente exercidos durante o co-design do aplicativo. Identifique instâncias de agência diagnóstica, conceptual e técnica, com especial atenção à "subtração tecnológica". **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Iniciamos o Estado E12 (Mapeamento de Agência) da camada de Síntese [cite: 1]. Este estado consolida o terceiro nível da triangulação interna, cruzando as ações descritivas (E04) e as intenções (E05) para identificar padrões de agência [cite: 1]. O foco é demonstrar como o professor exerce a intencionalidade pedagógica (como o papel de mediador socrático) perante a máquina. A redação deve utilizar o vocabulário e a norma do português brasileiro.
+
+**[RULES]**
+1. Utilize os prefixos `AGC` (padrão de agência), `COD` (código temático) e `PAT` (padrão transversal) [cite: 1].
+2. Permite-se a interpretação teórica neste estado, desde que explicitamente fundamentada nas evidências e inferências dos estados anteriores [cite: 1].
+3. Destaque exemplos claros de "subtração tecnológica" [cite: 1] — momentos em que a complexidade técnica foi reduzida em favor da clareza pedagógica.
+
+**[FORMAT]**
+Organize o mapeamento em seções analíticas, apresentando a tipologia de agência identificada.
+**Diretiva final:** Gere e salve o documento resultante como `E12_Mapeamento_Agencia.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 14: Estado E13 - Codificação
+**Copie e cole este prompt após o mapeamento de agência:**
+
+**[ROLE]**
+Atue como Analista de Dados Qualitativos.
+
+**[TASK]**
+Desenvolva o codebook qualitativo definitivo baseado na análise temática de todo o processo de co-design do aplicativo. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Estamos no Estado E13 (Codificação) [cite: 1]. O objetivo é catalogar o dicionário de códigos que resume a interação pedagógica-tecnológica, mantendo o alinhamento com a abordagem construtivista do projeto.
+
+**[RULES]**
+1. Estruture os códigos `COD` e os padrões `PAT` gerados no estado E12 [cite: 1].
+2. Cada código deve ter uma definição clara, critério de inclusão/exclusão e um exemplo representativo extraído do corpus.
+
+**[FORMAT]**
+Apresente o codebook em formato de tabela (ID, Nome do Código, Definição, Exemplo).
+**Diretiva final:** Gere e salve o documento resultante como `E13_Codificacao.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 15: Estado E14 - Síntese Metodológica
+**Copie e cole este prompt após consolidar o codebook:**
+
+**[ROLE]**
+Atue como Metodologista e Autor Científico.
+
+**[TASK]**
+Sintetize os princípios de co-design derivados da experiência de construção deste aplicativo. Articule como a interação professor-IA suportou a criação do artefato educativo. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Avançamos para o Estado E14 (Síntese Metodológica) [cite: 1]. Este estado só pode ser executado após todos os anteriores, pois ele gera as conclusões científicas do ciclo iterativo do aplicativo [cite: 1].
+
+**[RULES]**
+1. Reúna os achados técnicos, pedagógicos e arquiteturais mapeados desde o estado E00.
+2. Formule de 3 a 5 princípios de design reprodutíveis que emergiram deste processo.
+
+**[FORMAT]**
+Redija um relatório estruturado como a seção de "Resultados e Discussão" de um artigo acadêmico.
+**Diretiva final:** Gere e salve o documento resultante como `E14_Sintese_Metodologica.md` diretamente na raiz do projeto.
+
+---
+
+## Prompt 16: Estado E15 - Corpus Final
+**Copie e cole este prompt para o fechamento do protocolo:**
+
+**[ROLE]**
+Atue como Arquivista Científico e Curador de Dados.
+
+**[TASK]**
+Gere o índice mestre de todo o material documentado na MEFD e produza o encerramento formal do corpus. **Exporte obrigatoriamente a resposta em formato `.md` para a raiz do projeto.**
+
+**[CONTEXT]**
+Chegamos ao último estado do protocolo, E15 (Corpus Final) [cite: 1]. O objetivo é consolidar a rastreabilidade do projeto, amarrando a ontologia de identificadores e declarando o congelamento do corpus [cite: 1].
+
+**[RULES]**
+1. Liste cronologicamente todos os arquivos `.md` gerados de E00 a E14.
+2. Apresente um resumo quantitativo: total de artefatos (`ART`), decisões (`DEC`), tensões (`TEN`) e turnos (`T`) mapeados.
+3. Não adicione nenhuma informação nova.
+
+**[FORMAT]**
+Estruture o índice mestre em listas hierárquicas e forneça uma declaração formal de encerramento metodológico.
+**Diretiva final:** Gere e salve o documento resultante como `E15_Corpus_Final.md` diretamente na raiz do projeto.
