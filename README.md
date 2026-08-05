@@ -1,11 +1,8 @@
 # AIRO Protocol — Empirical Corpus Repository
 
 **AI Studio Research Orchestrator (AIRO v1.0)**  
-*Supplementary Data for: "Auditing the Self: The AIRO Protocol, Technological Subtraction, and Teacher-AI Co-Design in Mathematics Education"*
 
 **Author:** Luiz Cláudio de Almeida Guimarães Júnior  
-**Institution:** NOVA FCT, Portugal  
-**Programme:** Mestrado em Ensino da Matemática  
 **Date:** 2026  
 
 ---
@@ -25,28 +22,28 @@ This corpus constitutes the audit trail for the findings reported in the associa
 ---
 #### 🧠 Fundamentação Teórica: O Protocolo AIRO e os Fundamentos de Hopcroft
 
-O protocolo **AI Studio Research Orchestrator (AIRO)** transcende a engenharia instrucional pragmática; ele encontra o seu rigor científico na convergência direta com a **Teoria de Autómatos, Linguagens Formais e Computabilidade** de John E. Hopcroft, Rajeev Motwani e Jeffrey D. Ullman (2006) [2, 3]. Ao modelar e auditar sistematicamente o co-design em tempo de concepção (*design-time*) [4, 5], esta arquitetura converte o saber prático e qualitativo do professor-investigador num ecossistema de software formalmente documentado e imutável [4, 6].
+O protocolo **AI Studio Research Orchestrator (AIRO)** transcende a engenharia instrucional pragmática; ele encontra o seu rigor científico na convergência direta com a **Teoria de Autómatos, Linguagens Formais e Computabilidade** de John E. Hopcroft, Rajeev Motwani e Jeffrey D. Ullman (2006) [2, 3]. Ao modelar e auditar sistematicamente o co-design em tempo de concepção (*design-time*), esta arquitetura converte o saber prático e qualitativo do professor-investigador num ecossistema de software formalmente documentado e imutável.
 
 ##### 1. O Processo de Co-Design como uma Máquina de Estados Finita Determinista (MEFD)
-O núcleo do AIRO mapeia o fluxo qualitativo do co-design numa **Máquina de Estados Finita Determinística (MEFD)** [7, 8]. De acordo com a formalização clássica de Hopcroft, um Autómato Finito Determinista (DFA) é definido pela 5-tupla $A = (Q, \Sigma, \delta, q_0, F)$ [7, 8], cujos componentes se traduzem na estrutura do repositório [1]:
+O núcleo do AIRO mapeia o fluxo qualitativo do co-design numa **Máquina de Estados Finita Determinística (MEFD)** . De acordo com a formalização clássica de Hopcroft, um Autómato Finito Determinista (DFA) é definido pela 5-tupla $A = (Q, \Sigma, \delta, q_0, F)$, cujos componentes se traduzem na estrutura do repositório:
 
-*   **$Q$ (Conjunto de Estados):** Os 16 estados sequenciais e mutuamente exclusivos ($Q = \{E00, E01, \dots, E15\}$) distribuídos pelas camadas funcionais de Identificação, Extração, Análise e Síntese [7, 9, 10].
-*   **$\Sigma$ (Alfabeto de Entrada):** Os estímulos compostos pelos prompts de extração estruturados e pelos tokens de validação humana emitidos pelo professor-investigador ("Aprovado" ou "Rejeitado") [10, 11].
-*   **$q_0$ (Estado Inicial):** A inicialização do escopo e metadados no estado $E00$ [7, 11].
-*   **$F$ (Conjunto de Estados Finais):** O estado de aceitação $E15$ que consolida o congelamento formal e a assinatura de integridade do corpus de pesquisa [7, 11, 12].
-*   **$\delta$ (Função de Transição):** A regra determinística que governa a evolução do protocolo [7, 12]. 
+*   **$Q$ (Conjunto de Estados):** Os 16 estados sequenciais e mutuamente exclusivos ($Q = \{E00, E01, \dots, E15\}$) distribuídos pelas camadas funcionais de Identificação, Extração, Análise e Síntese.
+*   **$\Sigma$ (Alfabeto de Entrada):** Os estímulos compostos pelos prompts de extração estruturados e pelos tokens de validação humana emitidos pelo professor-investigador ("Aprovado" ou "Rejeitado").
+*   **$q_0$ (Estado Inicial):** A inicialização do escopo e metadados no estado $E00$.
+*   **$F$ (Conjunto de Estados Finais):** O estado de aceitação $E15$ que consolida o congelamento formal e a assinatura de integridade do corpus de pesquisa.
+*   **$\delta$ (Função de Transição):** A regra determinística que governa a evolução do protocolo. 
 
-Ao nível macro, a função impõe a **macro-irreversibilidade** ($\delta(E_i, \text{aprovado}) = E_{i+1}$), garantindo que um estado aprovado e catalogado se torna imutável e à prova de viés de retroatividade [12, 13]. Ao nível micro, o protocolo suporta **loops de retorno** em estados ativos para refinar interações e eliminar alucinações ($\delta(E_i, \text{rejeitado}) = E_i$), caracterizando a **micro-reversibilidade** do co-design [13-15].
+Ao nível macro, a função impõe a **macro-irreversibilidade** ($\delta(E_i, \text{aprovado}) = E_{i+1}$), garantindo que um estado aprovado e catalogado se torna imutável e à prova de viés de retroatividade. Ao nível micro, o protocolo suporta **loops de retorno** em estados ativos para refinar interações e eliminar alucinações ($\delta(E_i, \text{rejeitado}) = E_i$), caracterizando a **micro-reversibilidade** do co-design.
 
 ##### 2. O LLM como uma Máquina de Turing Universal (UTM) e o RTCRF como Gramática (CFG)
 Em vez de reduzir a Inteligência Artificial Generativa a um chatbot conversacional, o AIRO opera sob o princípio computacional de que o LLM funciona como uma **Máquina de Turing Universal (UTM)**. Uma UTM lê na sua fita a descrição codificada de uma máquina de estados $M$ e uma string de entrada $w$ para simular a execução de $M$ sobre $w$.
 
 No AIRO, este princípio é operacionalizado em duas frentes:
-1.  **O Modelo RTCRF como Gramática Livre de Contexto (CFG):** Para mitigar o não-determinismo probabilístico inerente aos LLMs (equivalente a um NFA stocástico), os prompts de extração são gerados sob o modelo **RTCRF (Role, Task, Context, Rules, Format)** [18, 19]. Este modelo atua como uma CFG cujas produções rígidas colapsam a variabilidade e as alucinações da máquina, forçando o compilador do LLM a gerar registos documentais estruturados e auditáveis.
+1.  **O Modelo RTCRF como Gramática Livre de Contexto (CFG):** Para mitigar o não-determinismo probabilístico inerente aos LLMs (equivalente a um NFA stocástico), os prompts de extração são gerados sob o modelo **RTCRF (Role, Task, Context, Rules, Format)**. Este modelo atua como uma CFG cujas produções rígidas colapsam a variabilidade e as alucinações da máquina, forçando o compilador do LLM a gerar registos documentais estruturados e auditáveis.
 2.  **O Prompt como Configuração de Estado:** Ao receber o prompt RTCRF, a UTM (LLM) simula a máquina específica $M$ (ex: o analista de dados do protocolo) sobre o corpus do utilizador ($w$), gerando a documentação estruturada que alimenta os estados de análise.
 
 ##### 3. Autómatos de Produto e o Rigor da Triangulação Qualitativa
-A dinâmica interativa do co-design envolve a execução paralela de dois agentes: a **Intencionalidade Pedagógica** (o Docente) e a **Execução Alocutiva** (a IA) [22]. A validação dessa interação baseia-se na teoria dos **Autómatos de Produto** de Hopcroft, utilizados para detetar descompassos em processos paralelos [23, 24].
+A dinâmica interativa do co-design envolve a execução paralela de dois agentes: a **Intencionalidade Pedagógica** (o Docente) e a **Execução Alocutiva** (a IA). A validação dessa interação baseia-se na teoria dos **Autómatos de Produto** de Hopcroft, utilizados para detetar descompassos em processos paralelos.
 
 O AIRO aplica este conceito através da **Triangulação Interna de Três Níveis**:
 *   **Nível Descritivo ($E04$):** O registo literal de interações e alterações de código.
